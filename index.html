@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="沈辰熹的个人项目作品集">
+  <title>沈辰熹｜个人项目</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <a class="name" href="#top">沈辰熹</a>
+    <nav><a href="#about">关于</a><a href="#projects">项目</a><a href="#education">教育经历</a><a href="#contact">联系</a></nav>
+  </header>
+
+  <main id="top">
+    <section id="about" class="intro">
+      <p class="kicker">哥伦比亚大学 · 电气工程硕士</p>
+      <h1>沈辰熹</h1>
+      <p>我目前就读于哥伦比亚大学电气工程专业，主要关注ASIC设计、数字 IC 设计、RTL 开发以及基于 FPGA 的硬件加速。我目前正在寻找数字 IC 设计、验证及 FPGA 开发相关岗位，预计于 2026 年 12 月毕业。欢迎来与我联系与交流。</p>
+      <div class="links"><a href="#projects">查看项目</a><a href="assets/scx-resume.docx" download>下载中文简历</a><a href="mailto:cxshen0304@163.com">发送邮件</a></div>
+    </section>
+
+    <section class="skills">
+      <div><span>编程语言</span><p>Verilog / SystemVerilog、VHDL、Python、C++、MATLAB</p></div>
+      <div><span>EDA 工具</span><p>Cadence( Virtuoso、Genus、Innovus、ModelSim)、Vivado</p></div>
+      <div><span>设计方向</span><p>ASIC Design、数字电路设计、CNN 加速器</p></div>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="section-heading"><h2>项目经历</h2></div>
+
+      <article class="card">
+        <div class="card-top"><span>2026 年 1 月 – 至今 · APPLE 支持的流片项目</span><b>ASIC</b></div>
+        <h3><i>⌘</i>可重构 N-body 加速器芯片</h3>
+        <p>面向 256 粒子 N-body 计算场景，设计基于 Systolic Array 架构的可重构片上系统，实现粒子间相互作用的并行加速计算。</p>
+        <ul><li>负责计算存储单元、片上 SRAM 等 RTL 模块设计及系统集成。</li><li>使用 Cadence Genus 完成逻辑综合与时序分析，基于 Innovus 完成布局布线及 WNS/TNS 优化。</li><li>TSMC 65 nm 工艺，核心面积 1 mm × 1 mm，目标频率 10 MHz，目标功耗低于 50 mW。</li></ul>
+        <div class="tags"><span>ASIC</span><span>Systolic Array</span><span>RTL</span><span>Genus</span><span>Innovus</span></div>
+        <div class="card-links"><a href="assets/nbody-report.pdf" target="_blank" rel="noopener">项目 PDF</a></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span>2026 年 1 月 – 2026 年 5 月 · 数字 VLSI</span><b>数字设计</b></div>
+        <h3><i>∿</i>1024-Point Radix-2 定点 FFT 处理器</h3>
+        <p>采用 Radix-2 DIT 算法与 SRAM 复用架构，实现 Q1.15 输入、Q9.7 输出的 1024 点定点频域变换。</p>
+        <ul><li>设计蝶形运算单元、地址生成器、FSM 及片上 SRAM 存储系统，完成模块集成与功能验证。</li><li>完成 Genus 综合、Innovus 布局布线、PrimeTime STA 及 Calibre DRC/LVS。</li><li>TSMC 65 nm 下核心面积 0.432 mm²，最高频率 261 MHz，后仿功耗 18.4 mW，平均 NRMSE 0.138%。</li></ul>
+        <div class="tags"><span>FFT</span><span>Verilog</span><span>SRAM</span><span>STA</span><span>DRC/LVS</span></div>
+        <div class="card-links"><a href="assets/fft-report.pdf" target="_blank" rel="noopener">项目 PDF</a><a href="https://github.com/File-Transfer-Assistant/6321_proj/tree/cx" target="_blank" rel="noopener">GitHub 仓库</a></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span>2026 年 1 月 – 2026 年 5 月 · FPGA</span><b>硬件加速</b></div>
+        <h3><i>◫</i>FPGA CNN 手写数字识别加速器</h3>
+        <p>面向手写数字识别应用，实现基于 LeNet 的 INT8 CNN 推理加速器，并构建 Browser–Flask–HPS–FPGA 端到端系统。</p>
+        <ul><li>负责卷积单元、FSM、AXI 通信接口与片上存储管理，实现 HPS 与 FPGA 的 MMIO 数据交互。</li><li>完成 RTL 仿真、Quartus 综合、时序优化及 FPGA 板级验证。</li><li>最高频率 61.94 MHz；FPGA 推理延迟 9.10 ms，端到端延迟 12.65 ms，相比 CPU 加速约 2.7 倍。</li></ul>
+        <div class="tags"><span>LeNet</span><span>FPGA</span><span>机器学习</span><span>Quartus</span></div>
+        <div class="card-links"><a href="assets/cnn-report.pdf" target="_blank" rel="noopener">项目 PDF</a><a href="https://github.com/cs4634/CNN_Accelerator" target="_blank" rel="noopener">GitHub 仓库</a></div>
+      </article>
+
+      <article class="card">
+        <div class="card-top"><span>2025 年 9 月 – 2025 年 12 月 · 数字VLSI</span><b>电路设计</b></div>
+        <h3><i>▦</i>8 位微控制器全定制设计</h3>
+        <p>完成 8 位微控制器数据通路设计，实现 ALU、Shifter、MUX、Latch、Bus Driver 及 8×8 SRAM 等核心模块。</p>
+        <ul><li>采用 Espresso 完成控制逻辑最小化并生成 PLA 控制结构。</li><li>基于传输门实现 MUX 与 Latch 等关键电路，完成全定制版图设计与优化。</li><li>通过 DRC/LVS，后仿功耗 1.9 mW，关键路径延迟 600 ps。</li></ul>
+        <div class="tags"><span>8位MCU</span><span>Custom Layout</span><span>晶体管级设计</span><span>TSMC 65nm</span></div>
+        <div class="card-links"><a href="assets/mcu-report.pdf" target="_blank" rel="noopener">项目 PDF</a></div>
+      </article>
+      
+      <article class="card">
+        <div class="card-top"><span>2025 年 10 月 – 2025 年 12 月 · 数字设计</span><b>RTL 实现</b></div>
+        <h3><i>≋</i>16-Tap FIR 数字滤波器设计</h3>
+        <p>面向双时钟域数字信号处理场景，使用 Verilog 实现 Q1.15 定点 FIR 滤波器数据通路，并完成从 RTL 设计到综合与时序分析的实现流程。</p>
+        <ul><li>针对 10 kHz 采样域与 1 MHz 处理域之间的数据传输，设计异步 FIFO 完成时钟域跨越（CDC）。</li><li>编写 Testbench 并使用 ModelSim 验证滤波结果；在 256 个样本测试下，输出 NRMSE 为 2.55×10⁻³。</li><li>分析关键路径与系统吞吐率并优化硬件结构；PrimeTime 报告总功耗 39.6 μW，综合后单元面积约 118k。</li></ul>
+        <div class="tags"><span>Verilog</span><span>FIR</span><span>CDC</span><span>PrimeTime</span><span>Design Compiler</span></div>
+        <div class="card-links"><a href="assets/fir-report.pdf" target="_blank" rel="noopener">项目 PDF</a></div>
+      </article>
+    </section>
+
+    <section id="education" class="education">
+      <div class="section-heading"><h2>教育与实习</h2></div>
+      <article><time>2025.08 – 2026.12（预计）</time><div><h3>哥伦比亚大学</h3><p>电气工程硕士 · GPA 3.76/4.0</p></div></article>
+      <article><time>2021.08 – 2025.05</time><div><h3>电子科技大学</h3><p>微电子学士 · GPA 3.75/4.0</p></div></article>
+      <article><time>2024.06 – 2024.10</time><div><h3>广东纯米电器科技有限公司</h3><p>通信设备测试实习生</p></div></article>
+    </section>
+
+    <section id="contact" class="contact"><h2>联系方式</h2><p><a href="mailto:cs4634@columbia.edu">cs4634@columbia.edu</a></p><p><a href="mailto:cxshen0304@163.com">cxshen0304@163.com</a></p><p>(+86) 199-3820-5207</p></section>
+  </main>
+  <footer>© 2026 沈辰熹</footer>
+</body>
+</html>
